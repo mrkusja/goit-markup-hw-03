@@ -29,6 +29,8 @@
 
     --portfolio-background-btn-color: #F5F4FA;
     --portfolio-background-hover-btn-color: #2196F3;
+    --portfolio-cards-background-color: #FFFFFF;
+    --portfolio-cards-border-color: #EEEEEE;
     --portfolio-text-btn-color: #212121;
     --portfolio-text-hover-btn-color: #FFFFFF;
 }
@@ -178,10 +180,12 @@ ol {
  }
 
 /* ===============HERO=============== */
-.hero {
+
+.hero-section {
 background-color: var(--hero-background-color);
 padding-top: 200px;
 padding-bottom: 200px;
+text-align: center;
 }
 
 .hero-title {
@@ -193,6 +197,8 @@ padding-bottom: 200px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--hero-title-color);
+    margin: 0 auto 30px auto;
+    width: 700px;
 }
 
 .modal-btn {
@@ -211,6 +217,7 @@ padding-bottom: 200px;
     padding: 10px 30px;
     border: none;
     border-radius: 4px;
+    margin: 0 auto;
 }
 
 .modal-btn:hover,
@@ -223,18 +230,18 @@ padding-bottom: 200px;
      background-color: var(--our-advantages-background-color);
  }
 
-.advantages-cards-content {
-    display: flex;
-    flex-wrap: wrap;
-}
+ .our-advantages {
+     display: flex;
+     flex-wrap: wrap;
+ }
 
-/* .advantages-list-item:not(:nth-child(4n)) {
-    margin-right: 30px;
+ .advantages-list-item {
+     width: 270px;
 }
-
-.advantages-list-item:not(:nth-last-child(-n+4)) {
-    margin-bottom: 30px;
-} */
+    
+.advantages-list-item:not(:nth-child(4n)) {
+     margin-right: 30px;
+}
 
  .advantages-title {
     font-family: var(--primary-font);
@@ -244,6 +251,7 @@ padding-bottom: 200px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--sections-titles-color);
+    margin-bottom: 10px;
  }
 
  .advantages-text {
@@ -258,6 +266,10 @@ padding-bottom: 200px;
  .about-item {
      display: flex;
      flex-wrap: wrap;
+ }
+
+ .about-section {
+     padding-bottom: 95px;
  }
 
  .about-cards {
@@ -394,32 +406,9 @@ padding-bottom: 200px;
  .footer-phone:focus {
      color: var(--accent-color);
  }
+
  /* ===============PORTFOLIO=============== */
-
- /* .modal-btn {
-     font-family: var(--primary-font);
-     font-weight: 700;
-     font-size: 16px;
-     line-height: 1.89;
-     display: flex;
-     align-items: center;
-     text-align: center;
-     letter-spacing: 0.06em;
-     color: var(--modal-btn-text-color);
-     background-color: var(--accent-color);
-     cursor: pointer;
-     min-width: 200px;
-     padding: 10px 30px;
-     border: none;
-     border-radius: 4px;
- }
-
- .modal-btn:hover,
- .modal-btn:focus {
-     background-color: var(--modal-btn-background-hover-color);
- } */
-
- .portfolio-menu-btn {
+  .portfolio-menu-btn {
     font-family: var(--primary-font);
     font-weight: 500;
     font-size: 16px;
@@ -451,6 +440,33 @@ padding-bottom: 200px;
      background-color: var(--portfolio-background-hover-btn-color);
  }
 
+.portfolio-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-cards {
+    background-color: var(--portfolio-cards-background-color);
+
+    flex-basis: calc((100% - 90px)/3);
+}
+
+.portfolio-cards:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.portfolio-cards:not(:nth-last-child(-n+3)) {
+    margin-bottom: 30px;
+}
+
+.portfolio-cards-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid var(--portfolio-cards-border-color);
+}
+
  .portfolio-project-name {
     font-family: var(--primary-font);
     font-weight: 700;
@@ -458,6 +474,7 @@ padding-bottom: 200px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--sections-titles-color);
+    margin-bottom: 5px;
  }
 
  .portfolio-project-description {
